@@ -3,6 +3,13 @@
 a [Sails v1](https://sailsjs.com) application
 
 
+To create a new Model use sails generate model <NAME_MODEL>
+
+To create a new Controller use sails generate controller <NAME_CONTROLLER>
+
+By default blueprint rest true is automatically set a CRUD routes for model
+
+
 ### Links
 
 + [Sails framework documentation](https://sailsjs.com/get-started)

@@ -6,22 +6,28 @@
  */
 
 module.exports = {
-  get: async (req, res) => {
-    try {
-      let movies = await Movie.find()
-      // Validation to exist records
-      if (!movies || movies.length === 0) {
-        return res.send({ success: false, message: 'No records found' })
-      }
-      // Validation fetched records
-      return res.send({ success: true, message: 'Fetched records!', movies })
-    } catch (e) {
-      sails.log.debug(e)
-      return res.send({
-        success: false,
-        message: 'Unable to fetch records'
-      })
-    }
-  }
+  // get: async (req, res) => {
+  //   try {
+  //     let movies = await Movie.find()
+  //     // Validation to exist records
+  //     if (!movies || movies.length === 0) {
+  //       return res.send({ success: false, message: 'No records found' })
+  //     }
+  //     // Validation fetched records
+  //     return res.send({ success: true, message: 'Fetched records!', movies })
+  //   } catch (e) {
+  //     sails.log.debug(e)
+  //     return res.send({
+  //       success: false,
+  //       message: 'Unable to fetch records'
+  //     })
+  //   }
+  // }
+  /**
+    * @api {get} /module List
+    * @apiUse rest_list
+    * @apiGroup module
+    * @apiUse Module_Type_Attributes
+    */
 };
 
